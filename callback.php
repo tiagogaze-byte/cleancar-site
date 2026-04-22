@@ -33,7 +33,7 @@ function parse_signed_request($signed_request) {
     list($encoded_sig, $payload) = explode('.', $signed_request, 2);
 
     // IMPORTANTE: Substitua abaixo pelo seu App Secret da Meta
-    $secret = "948034767678897"; 
+    $secret = "291b769b88b837a6a13c22363e9373fa"; 
 
     $sig = base64_url_decode($encoded_sig);
     $data = json_decode(base64_url_decode($payload), true);
