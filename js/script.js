@@ -32,20 +32,20 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Subtle parallax on orbs for mouse movement
-    document.addEventListener('mousemove', function(e) {
-        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-            return;
-        }
+    const orb1 = document.querySelector('.orb-1');
+    const orb2 = document.querySelector('.orb-2');
 
-        const mouseX = e.clientX / window.innerWidth;
-        const mouseY = e.clientY / window.innerHeight;
-        
-        const orb1 = document.querySelector('.orb-1');
-        const orb2 = document.querySelector('.orb-2');
-        
-        if (orb1 && orb2) {
+    if (orb1 && orb2) {
+        document.addEventListener('mousemove', function(e) {
+            if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                return;
+            }
+
+            const mouseX = e.clientX / window.innerWidth;
+            const mouseY = e.clientY / window.innerHeight;
+            
             orb1.style.transform = 'translate(' + (mouseX * 30) + 'px, ' + (mouseY * 30) + 'px)';
             orb2.style.transform = 'translate(' + (-mouseX * 20) + 'px, ' + (-mouseY * 20) + 'px)';
-        }
-    });
+        });
+    }
 });
