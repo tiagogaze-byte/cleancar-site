@@ -15,7 +15,7 @@
                 <a href="index.html" class="nav-link active">Início</a>
                 <a href="politica.html" class="nav-link">Privacidade</a>
                 <a href="termos.html" class="nav-link">Termos</a>
-                <a href="instrucoes-exclusao.html" class="nav-link">Exclusão</a>
+                <a href="exclusao.php" class="nav-link">Exclusão</a>
             </nav>
         </div>
     </header>
